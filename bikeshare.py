@@ -225,7 +225,8 @@ def display_raw_data(df):
     pd.set_option('display.max_columns',200)
 
 
-    while True:            
+    while True:          
+        # user does not want to see the raw data anymore  
         if raw == 'no':
             break
         elif raw == 'yes':          
