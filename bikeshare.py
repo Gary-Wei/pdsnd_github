@@ -121,6 +121,8 @@ def time_stats(df):
 
     # display the most common month
     popular_month = df['month'].mode()[0]
+
+    # convert numeric month to English name month
     popular_month = calendar.month_name[popular_month]
     print('Most Popular Start Month: {}.'.format(popular_month))
 
