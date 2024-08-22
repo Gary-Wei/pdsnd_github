@@ -205,6 +205,7 @@ def user_stats(df):
     # Display earliest, most recent, and most common year of birth
     try:
         year_of_birth = df['Birth Year']
+        # convert float year to integer year
         earliest = int(year_of_birth.min())
         latest   = int(year_of_birth.max())
         common   = int(year_of_birth.mode()[0])
