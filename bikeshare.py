@@ -36,7 +36,7 @@ def get_filters():
         filter = input('Would you like to filter the data by month, day, both, or not at all? Type "none" for no time filter.').lower()
         if filter == 'none':
             filter_input = True
-            month_input  = True
+            month_input  = True 
             day_input    = True
         elif filter == 'month':
             filter_input = True
@@ -85,7 +85,7 @@ def load_data(city, month, day):
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
+        df - Pandas DataFrame containing city data filtered by month and day. Additional columns for trip starting month, day of week and hour are added.
     """
     # load data file into a dataframe
     df = pd.read_csv(CITY_DATA[city])
@@ -121,6 +121,8 @@ def time_stats(df):
 
     # display the most common month
     popular_month = df['month'].mode()[0]
+
+    # convert numeric month to English name month
     popular_month = calendar.month_name[popular_month]
     print('Most Popular Start Month: {}.'.format(popular_month))
 
