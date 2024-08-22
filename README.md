@@ -13,5 +13,4 @@ The project conducts analysis on bikeshare data from Chicago, Washington D.C. an
 Include the files used
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Credit to Udacity in preparing the data science nanodegree. The program is well structured. The data provider is also highly appreciated.
